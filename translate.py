@@ -7,12 +7,16 @@ async def translate_text(text):
     choices = {
         '1': 'es',
         '2': 'fr',
-        '3': 'zh-cn'
+        '3': 'zh-cn',
+        '4': 'hi',
+        '5': 'te'
     }
     print("Choose the language to be translated")
     print("1. Spanish")
     print("2. French")
     print("3. Chinese")
+    print("4. Hindi")
+    print("5. Telugu")
     choice = input("Enter your choice: ")
 
     if choice not in choices:
