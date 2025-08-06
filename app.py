@@ -34,23 +34,33 @@ def real_time_language_translator():
     if mode == '1':
         text = speech_to_text()
         asyncio.run(translate_text(text, target_language))
+        result = asyncio.run(translate_text(text, target_language))
+        with open("translated_text.txt", "w", encoding="utf-8") as f:
+            f.write(result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '2':
         text = input("Enter the text to translate: ")
         asyncio.run(translate_text(text, target_language))
+        result = asyncio.run(translate_text(text, target_language))
+        with open("translated_text.txt", "w", encoding="utf-8") as f:
+            f.write(result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '3':
         text = input("Enter the text to translate: ")
         translated_text = asyncio.run(translate_text(text, target_language))
         text_to_speech(translated_text, language=target_language)
+        with open("translated_text.txt", "w", encoding="utf-8") as f:
+            f.write(translated_text)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '4':
         text = speech_to_text()
         translated_text = asyncio.run(translate_text(text, target_language))
         text_to_speech(translated_text, language=target_language)
+        with open("translated_text.txt", "w", encoding="utf-8") as f:
+            f.write(translated_text)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '5':
