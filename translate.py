@@ -30,7 +30,7 @@ async def translate_text(text):
     return translated_text
 
 if __name__ == "__main__":
-    print("Choose the mode:")
+    print("Choose the mode for translation:")
     print("1. Text to Text")
     print("2. Speech to Text")
     mode = input("Enter your choice: ")
