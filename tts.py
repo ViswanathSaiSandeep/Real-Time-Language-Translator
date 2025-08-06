@@ -3,7 +3,7 @@ import pygame
 import time
 import os
 
-def text_to_speech(text, language='en'):
+def text_to_speech(text, language="en"):
     if not text:
         print("No text provided for TTS.")
         return
@@ -17,7 +17,6 @@ def text_to_speech(text, language='en'):
         pygame.mixer.music.load(filename)
         time.sleep(0.3)
         pygame.mixer.music.play()
-        print("Playing the translated speech...")
         
         while pygame.mixer.music.get_busy():
             time.sleep(0.1)
