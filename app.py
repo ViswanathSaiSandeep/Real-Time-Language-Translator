@@ -12,7 +12,8 @@ def real_time_language_translator():
     print("1. Speech to Text")
     print("2. Text to Text")
     print("3. Text to Speech")
-    print("4. Exit")
+    print("4. Speech to Speech")
+    print("5. Exit")
     mode = input("Enter the mode number: ")
     choices = {
         '1': 'zh-cn',
@@ -47,6 +48,12 @@ def real_time_language_translator():
         time.sleep(1)
         real_time_language_translator()
     elif mode == '4':
+        text = speech_to_text()
+        translated_text = asyncio.run(translate_text(text, target_language))
+        text_to_speech(translated_text, language=target_language)
+        time.sleep(1)
+        real_time_language_translator()
+    elif mode == '5':
         print("Exiting the program.")
         exit()
     else:
