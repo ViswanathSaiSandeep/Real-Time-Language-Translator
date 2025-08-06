@@ -30,8 +30,17 @@ async def translate_text(text):
     return translated_text
 
 if __name__ == "__main__":
-    text = speech_to_text()
-    if text:
+    print("Choose the mode:")
+    print("1. Text to Text")
+    print("2. Speech to Text")
+    mode = input("Enter your choice: ")
+
+    if mode == '1':
+        text = input("Enter the text to be translated: ")
         asyncio.run(translate_text(text))
-    else:
-        print("No speech detected.")
+    elif mode == '2':
+        text = speech_to_text()
+        if text:
+            asyncio.run(translate_text(text))
+        else:
+            print("No speech detected.")
