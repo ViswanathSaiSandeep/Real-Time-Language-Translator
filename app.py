@@ -74,7 +74,7 @@ def real_time_language_translator():
             text = input("Enter the text to translate: ")
             translated_text = translate_text(text, target_language)
             text_to_speech(translated_text, language=target_language)
-            save_translation(mode, target_language, text, result)
+            save_translation(mode, target_language, text, translated_text)
             time.sleep(1)
             real_time_language_translator()
         elif mode_input == '4':
@@ -82,7 +82,7 @@ def real_time_language_translator():
             text = speech_to_text()
             translated_text = translate_text(text, target_language)
             text_to_speech(translated_text, language=target_language)
-            save_translation(mode, target_language, text, result)
+            save_translation(mode, target_language, text, translated_text)
             time.sleep(1)
             real_time_language_translator()
 

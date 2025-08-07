@@ -26,3 +26,31 @@ Input    : hello my name is v sai sandeep. iam a developer working in hyderabad.
 Output   : హలో నా పేరు వి సాయి సందీప్.నేను హైదరాబాద్‌లో పనిచేస్తున్న డెవలపర్.హైదరాబాద్ చాలా మంది ఇక్కడ పనిచేసే హిటెక్ సిటీ.నగరంలో జీవితం చాలా కష్టం కాని ఇక్కడ నేర్చుకోవలసిన విషయాలు చాలా ఉన్నాయి
 -------------------------------
 
+----- Translation Session -----
+Mode     : Speech to Text
+Language : te
+Input    : my name is Sai Sandeep
+Output   : నా పేరు సాయి సందీప్
+-------------------------------
+
+----- Translation Session -----
+Mode     : Text to Speech
+Language : zh-cn
+Input    : My name is Sai Sandeep
+Output   : 我叫Sai Sandeep
+-------------------------------
+
+----- Translation Session -----
+Mode     : Speech to Speech
+Language : hi
+Input    : what is your name
+Output   : आपका क्या नाम है
+-------------------------------
+
+----- Translation Session -----
+Mode     : Speech to Speech
+Language : te
+Input    : I am leaving in Hyderabad where are you living
+Output   : నేను హైదరాబాద్‌లో బయలుదేరుతున్నాను మీరు ఎక్కడ నివసిస్తున్నారు
+-------------------------------
+
