@@ -3,9 +3,17 @@ from translate import translate_text
 from tts import text_to_speech
 import time
 import os
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-
+def save_translation(mode, language, input, output):
+    with open("translated_text.txt", "a", encoding="utf-8") as f:
+        f.write("----- Translation Session -----\n")
+        f.write(f"Mode    : {mode}\n")
+        f.write(f"Language: {language}\n")
+        f.write(f"Input   : {input}\n")
+        f.write(f"Output  : {output}\n")
+        f.write("-------------------------------\n\n")
 def real_time_language_translator():
     clear_screen()
     print("------------------------------------------------")
@@ -35,33 +43,32 @@ def real_time_language_translator():
     target_language = choices[choice]
     print("Selected ", target_language, " as the target language.")
     if mode == '1':
+        mode = "Speech to Text"
         text = speech_to_text()
         result = translate_text(text, target_language)
-        with open("translated_text.txt", "w", encoding="utf-8") as f:
-            f.write(result)
-        time.sleep(1)
+        save_translation(mode, target_language, text, result)
         real_time_language_translator()
     elif mode == '2':
+        mode = "Text to Text"
         text = input("Enter the text to translate: ")
         result = translate_text(text, target_language)
-        with open("translated_text.txt", "w", encoding="utf-8") as f:
-            f.write(result)
+        save_translation(mode, target_language, text, result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '3':
+        mode = "Text to Speech"
         text = input("Enter the text to translate: ")
         translated_text = translate_text(text, target_language)
         text_to_speech(translated_text, language=target_language)
-        with open("translated_text.txt", "w", encoding="utf-8") as f:
-            f.write(translated_text)
+        save_translation(mode, target_language, text, result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '4':
+        mode = "Speech to Speech"
         text = speech_to_text()
         translated_text = translate_text(text, target_language)
         text_to_speech(translated_text, language=target_language)
-        with open("translated_text.txt", "w", encoding="utf-8") as f:
-            f.write(translated_text)
+        save_translation(mode, target_language, text, result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '5':

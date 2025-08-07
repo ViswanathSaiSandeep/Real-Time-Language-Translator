@@ -1,0 +1,7 @@
+----- Translation Session -----
+Mode    : 2
+Language: es
+Input   : I want to go to Hyderabad and I want to drink tea.
+Output  : Quiero ir a Hyderabad y quiero tomar té.
+-----------------------------
+
