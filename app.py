@@ -1,10 +1,13 @@
 from stt import speech_to_text
 from translate import translate_text
 from tts import text_to_speech
-import asyncio
 import time
+import os
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def real_time_language_translator():
+    clear_screen()
     print("------------------------------------------------")
     print("- Welcome to the Real-Time Language Translator -")
     print("------------------------------------------------")
@@ -33,23 +36,21 @@ def real_time_language_translator():
     print("Selected ", target_language, " as the target language.")
     if mode == '1':
         text = speech_to_text()
-        asyncio.run(translate_text(text, target_language))
-        result = asyncio.run(translate_text(text, target_language))
+        result = translate_text(text, target_language)
         with open("translated_text.txt", "w", encoding="utf-8") as f:
             f.write(result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '2':
         text = input("Enter the text to translate: ")
-        asyncio.run(translate_text(text, target_language))
-        result = asyncio.run(translate_text(text, target_language))
+        result = translate_text(text, target_language)
         with open("translated_text.txt", "w", encoding="utf-8") as f:
             f.write(result)
         time.sleep(1)
         real_time_language_translator()
     elif mode == '3':
         text = input("Enter the text to translate: ")
-        translated_text = asyncio.run(translate_text(text, target_language))
+        translated_text = translate_text(text, target_language)
         text_to_speech(translated_text, language=target_language)
         with open("translated_text.txt", "w", encoding="utf-8") as f:
             f.write(translated_text)
@@ -57,7 +58,7 @@ def real_time_language_translator():
         real_time_language_translator()
     elif mode == '4':
         text = speech_to_text()
-        translated_text = asyncio.run(translate_text(text, target_language))
+        translated_text = translate_text(text, target_language)
         text_to_speech(translated_text, language=target_language)
         with open("translated_text.txt", "w", encoding="utf-8") as f:
             f.write(translated_text)
