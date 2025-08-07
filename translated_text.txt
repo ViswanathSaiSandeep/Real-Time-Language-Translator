@@ -19,3 +19,10 @@ Input   : Sai is a curious and tech-savvy developer working on real-time languag
 Output  : SAI అనేది నిజ-సమయ భాషా సాధనాలపై పనిచేసే ఆసక్తికరమైన మరియు టెక్-అవగాహన ఉన్న డెవలపర్.జావా మరియు పైథాన్‌లో బలమైన నైపుణ్యాలతో, అతను కోర్ కార్యాచరణపై దృష్టి పెడతాడు మరియు GUI తో ప్రాజెక్ట్ను మెరుగుపరచడానికి ప్రణాళికలు వేస్తాడు.అతను API లను చురుకుగా అన్వేషిస్తాడు, వనరులను చక్కగా నిర్వహిస్తాడు మరియు శుభ్రమైన, వినియోగదారు-స్నేహపూర్వక పరిష్కారాలను అందించడం లక్ష్యంగా పెట్టుకున్నాడు.
 -------------------------------
 
+----- Translation Session -----
+Mode     : Text to Text
+Language : te
+Input    : hello my name is v sai sandeep. iam a developer working in hyderabad. hyderabad is a hitech city many people work here. life in the city is very difficult but there are many things to learn here
+Output   : హలో నా పేరు వి సాయి సందీప్.నేను హైదరాబాద్‌లో పనిచేస్తున్న డెవలపర్.హైదరాబాద్ చాలా మంది ఇక్కడ పనిచేసే హిటెక్ సిటీ.నగరంలో జీవితం చాలా కష్టం కాని ఇక్కడ నేర్చుకోవలసిన విషయాలు చాలా ఉన్నాయి
+-------------------------------
+
