@@ -3,7 +3,7 @@ import threading
 import webbrowser
 from PIL import Image, ImageTk
 from stt import speech_to_text
-from translate import translate_text
+from basic_translate import translate_text
 from tts import text_to_speech
 
 class TranslatorApp(ctk.CTk):
