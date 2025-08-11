@@ -132,7 +132,7 @@ class TranslatorApp(ctk.CTk):
         self.title_label = ctk.CTkLabel(
             self,
             text="PRAMAHA TRANSLATE",
-            font=ctk.CTkFont(family="Product Sans",size=25, weight="bold"),
+            font=ctk.CTkFont(family="Poppins",size=25, weight="bold"),
             text_color="#ffffff"
         )
         self.title_label.pack(pady=25)
@@ -149,7 +149,7 @@ class TranslatorApp(ctk.CTk):
         }
 
         # source language dropdown menu
-        self.source_lang_label_title = ctk.CTkLabel(self.main_frame, text="Source Language", font=ctk.CTkFont(family="Product Sans", size=16, weight="bold"), text_color="#ffffff")
+        self.source_lang_label_title = ctk.CTkLabel(self.main_frame, text="Source Language", font=ctk.CTkFont(family="Poppins", size=16, weight="bold"), text_color="#ffffff")
         self.source_lang_label_title.grid(row=0, column=0, pady=(0,5), sticky="s")
         self.source_language_var = ctk.StringVar(value="English")
         self.source_language_menu = ctk.CTkOptionMenu(
@@ -162,7 +162,7 @@ class TranslatorApp(ctk.CTk):
             button_hover_color="#2A2B30",
             dropdown_fg_color="#121318",
             text_color="#ffffff",
-            font=ctk.CTkFont(family="Product Sans", size=17),
+            font=ctk.CTkFont(family="Poppins", size=17),
             anchor="center",
             height=50,
             corner_radius=25
@@ -170,7 +170,7 @@ class TranslatorApp(ctk.CTk):
         self.source_language_menu.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 10))
 
         # target language dropdown menu
-        self.target_lang_label_title = ctk.CTkLabel(self.main_frame, text="Target Language", font=ctk.CTkFont(family="Product Sans", size=16, weight="bold"), text_color="#ffffff")
+        self.target_lang_label_title = ctk.CTkLabel(self.main_frame, text="Target Language", font=ctk.CTkFont(family="Poppins", size=16, weight="bold"), text_color="#ffffff")
         self.target_lang_label_title.grid(row=0, column=2, pady=(0,5), sticky="s")
         self.target_language_var = ctk.StringVar(value="Choose the Language")
         self.target_language_menu = ctk.CTkOptionMenu(
@@ -183,7 +183,7 @@ class TranslatorApp(ctk.CTk):
             button_hover_color="#2A2B30",
             dropdown_fg_color="#121318",
             text_color="#ffffff",
-            font=ctk.CTkFont(family="Product Sans", size=17),
+            font=ctk.CTkFont(family="Poppins", size=17),
             anchor="center",
             height=50,
             corner_radius=25
@@ -196,10 +196,10 @@ class TranslatorApp(ctk.CTk):
         self.input_frame.grid_rowconfigure(1, weight=1)
         self.input_frame.grid_columnconfigure(0, weight=1)
 
-        self.input_lang_label = ctk.CTkLabel(self.input_frame, text="English", font=ctk.CTkFont(family="Product Sans Light", size=16), text_color="#b4b4dd", anchor="center")
+        self.input_lang_label = ctk.CTkLabel(self.input_frame, text="English", font=ctk.CTkFont(family="Poppins Light", size=16), text_color="#b4b4dd", anchor="center")
         self.input_lang_label.grid(row=0, column=0, padx=10, pady=(10, 5))
 
-        self.input_text = ctk.CTkTextbox(self.input_frame, wrap="word", fg_color="transparent", text_color="#ffffff", font=ctk.CTkFont(family="Product Sans", size=15, weight="bold"), border_width=0)
+        self.input_text = ctk.CTkTextbox(self.input_frame, wrap="word", fg_color="transparent", text_color="#ffffff", font=ctk.CTkFont(family="Poppins", size=15, weight="bold"), border_width=0)
         self.input_text.grid(row=1, column=0, padx=20, pady=(0, 20), sticky="nsew")
         self.input_text.insert("1.0", "Enter the text to translate!")
 
@@ -209,10 +209,10 @@ class TranslatorApp(ctk.CTk):
         self.output_frame.grid_rowconfigure(1, weight=1)
         self.output_frame.grid_columnconfigure(0, weight=1)
 
-        self.output_lang_label = ctk.CTkLabel(self.output_frame, text="Choose the Language", font=ctk.CTkFont(family="Product Sans Light", size=16), text_color="#b4b4dd", anchor="center")
+        self.output_lang_label = ctk.CTkLabel(self.output_frame, text="Choose the Language", font=ctk.CTkFont(family="Poppins Light", size=16), text_color="#b4b4dd", anchor="center")
         self.output_lang_label.grid(row=0, column=0, padx=10, pady=(10, 5))
 
-        self.output_text = ctk.CTkTextbox(self.output_frame, wrap="word", fg_color="transparent", text_color="#ffffff", font=ctk.CTkFont(family="Product Sans", size=15, weight="bold"), border_width=0)
+        self.output_text = ctk.CTkTextbox(self.output_frame, wrap="word", fg_color="transparent", text_color="#ffffff", font=ctk.CTkFont(family="Poppins", size=15, weight="bold"), border_width=0)
         self.output_text.grid(row=1, column=0, padx=20, pady=(0, 20), sticky="nsew")
         self.output_text.insert("1.0", "Translated Text will appear here!")
 
@@ -225,7 +225,7 @@ class TranslatorApp(ctk.CTk):
         self.options_label = ctk.CTkLabel(
             self,
             text="Select the Mode",
-            font=ctk.CTkFont(family="Product Sans", size=18, weight="bold"),
+            font=ctk.CTkFont(family="Poppins", size=18, weight="bold"),
             text_color="#ffffff"
         )
         self.options_label.pack(pady=(20, 5))
@@ -235,22 +235,22 @@ class TranslatorApp(ctk.CTk):
         self.button_frame.pack(fill="x", padx=15, pady=10)
         self.button_frame.grid_columnconfigure((0, 1, 2, 3, 4, 5), weight=1)
 
-        self.translate_button=ctk.CTkButton(self.button_frame, text="Translate", command=self.translate_gui, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8", width=105)
+        self.translate_button=ctk.CTkButton(self.button_frame, text="Translate", command=self.translate_gui, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8", width=105)
         self.translate_button.grid(row=0, column=0, padx=10, pady=(0,15), sticky="ew")
 
-        self.record_button=ctk.CTkButton(self.button_frame, text="Speech to Text", command=self.record_and_translate, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
+        self.record_button=ctk.CTkButton(self.button_frame, text="Speech to Text", command=self.record_and_translate, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
         self.record_button.grid(row=0, column=1, padx=5, pady=(0,15), sticky="ew")
 
-        self.speak_button=ctk.CTkButton(self.button_frame, text="Text to Speech", command=self.speak_translation, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
+        self.speak_button=ctk.CTkButton(self.button_frame, text="Text to Speech", command=self.speak_translation, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
         self.speak_button.grid(row=0, column=2, padx=5, pady=(0,15), sticky="ew")
 
-        self.trans_button=ctk.CTkButton(self.button_frame, text="Speech to Speech", command=self.record_and_speak, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
+        self.trans_button=ctk.CTkButton(self.button_frame, text="Speech to Speech", command=self.record_and_speak, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#6868D8")
         self.trans_button.grid(row=0, column=3, padx=5, pady=(0,15), sticky="ew")
 
-        self.clear_button=ctk.CTkButton(self.button_frame, text="Clear Text", command=self.clear_all_text, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#CB8F4A", width=105)
+        self.clear_button=ctk.CTkButton(self.button_frame, text="Clear Text", command=self.clear_all_text, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#CB8F4A", width=105)
         self.clear_button.grid(row=0, column=4, padx=5, pady=(0,15), sticky="ew")
 
-        self.exit_button=ctk.CTkButton(self.button_frame, text="Exit", command=self.exit_app, height=50, font=ctk.CTkFont(family="Product Sans", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#D95555", width=75)
+        self.exit_button=ctk.CTkButton(self.button_frame, text="Exit", command=self.exit_app, height=50, font=ctk.CTkFont(family="Poppins", size=14, weight="bold"), corner_radius=20, fg_color="#121318", hover_color="#D95555", width=75)
         self.exit_button.grid(row=0, column=5, padx=5, pady=(0,15), sticky="ew")
         
 
