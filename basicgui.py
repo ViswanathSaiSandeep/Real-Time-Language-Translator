@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import threading
+import webbrowser
 from PIL import Image, ImageTk
 from stt import speech_to_text
 from translate import translate_text
@@ -125,9 +126,9 @@ class TranslatorApp(ctk.CTk):
         # PRAMAHA Logo
         pramaha_logo_image = Image.open("pramaha_logo.png") # Make sure the file is in PNG format
         pramaha_logo = ctk.CTkImage(light_image=pramaha_logo_image, dark_image=pramaha_logo_image, size=(200, 50))
-        self.pramaha_logo_label = ctk.CTkLabel(self, image=pramaha_logo, text="")
+        self.pramaha_logo_label = ctk.CTkLabel(self, image=pramaha_logo, text="", cursor="hand2")
         self.pramaha_logo_label.place(x=15, y=16)
-
+        
         #title
         self.title_label = ctk.CTkLabel(
             self,
@@ -136,6 +137,9 @@ class TranslatorApp(ctk.CTk):
             text_color="#ffffff"
         )
         self.title_label.pack(pady=25)
+        def open_company_website(event=None):
+            webbrowser.open("https://pramaha.com/")
+        self.pramaha_logo_label.bind("<Button-1>", open_company_website)
 
         #main frame
         self.main_frame = ctk.CTkFrame(self, fg_color="transparent")
