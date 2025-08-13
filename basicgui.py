@@ -104,8 +104,6 @@ class TranslatorApp(ctk.CTk):
     def clear_all_text(self):
         self.input_text.delete("1.0", "end")
         self.output_text.delete("1.0", "end")
-        self.input_text.insert("1.0", "Enter the text to translate!")
-        self.output_text.insert("1.0", "Translated Text will appear here!")
         
     def swap_languages(self):
         input_content = self.input_text.get("1.0", "end-1c")
